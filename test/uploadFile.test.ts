@@ -4,7 +4,7 @@ describe('upload file', () =>{
     const filePath0 = '../letPlayWright/videos/a.webm';
     const filePath1 = '../letPlayWright/videos/b.webm';
 
-    xtest("upload file using set input files", async() => {
+    test("upload file using set input files", async() => {
        const browser = await chromium.launch({
        headless: false
     })
