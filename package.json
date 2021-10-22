@@ -28,7 +28,7 @@
             "json",
             "node"
         ],
-        "testTimeout": 5600000
+        "testTimeout": 120000
     },
     "preset": "ts-jest/presets/default-esm",
     "globals": {
