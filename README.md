@@ -9,3 +9,4 @@ In this project,
 3. How to manage alert boxes
 4. Testing and handling of single window and multiple windows
 5. How to do a codeless automation using chromium
+6. How to upload videos during the execution
