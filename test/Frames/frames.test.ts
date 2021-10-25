@@ -9,7 +9,15 @@ beforeAll( async() =>{
     browser = await chromium.launch({
         headless: false
     })
-     context = await browser.newContext()
+     context = await browser.newContext({
+            recordVideo:{
+              dir: "./videos/",
+            size: {
+              width: 640,
+              height: 480
+            }
+        }
+     })
      page = await context.newPage();
     await page.goto("https://letcode.in/frame")
 })
@@ -34,5 +42,10 @@ test("Interaction with frames", async() =>{
     const parent = frames[0].parentFrame();
     await parent?.fill("input[name='lname']", "gmail");
     }else{ throw new Error("No frames found");}
+})
+afterAll(async() => {
+    await browser.close();
+    await context.close();
+    await page.close();
 })
 })

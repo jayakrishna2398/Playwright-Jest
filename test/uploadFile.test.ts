@@ -2,7 +2,7 @@ import { chromium } from "playwright";
 
 describe('upload file', () =>{
     const filePath0 = '../letPlayWright/videos/a.webm';
-    const filePath1 = '../letPlayWright/videos/b.webm';
+    const filePath1 = '../letPlayWright/videos/Testing forms.webm';
 
     test("upload file using set input files", async() => {
        const browser = await chromium.launch({
