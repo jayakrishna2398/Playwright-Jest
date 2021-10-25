@@ -26,5 +26,23 @@ describe("searching elements", () =>{
         await page.waitForSelector("app-gitrepos ol li", {timeout: 5000})
         const repository = await page.$$("app-gitrepos ol li");
         console.log(repository.length);
+
+        for await(const repo of repository){
+            console.log(await repo.innerText());
+        }
+        const allUrls = await Promise.all(repository.map(async(repo,i) =>{
+            return await repo.innerText()
+        }))
+        console.log(allUrls);
+    })
+        afterEach(async() =>{
+            //await page.screenshot({path: Date.now() + "screenshot1.png"});
+            await page.screenshot({path: "screenshot2.png", fullPage: true});
+        })
+
+    afterAll(async() => {
+        await browser.close();
+        await context.close();
+        await page.close();
     })
 })
