@@ -22,7 +22,7 @@ test("Interaction with frames", async() =>{
        await frame.fill("input[name='fname']","jayakrishna");
        await frame.fill("input[placeholder='Enter email']","Th");
        //testing a innerframe with the parent
-    const frames = frame.childFrames()   //child frame
+    const frames = frame.childFrames();   //child frame
     console.log("No of inner frames " + frames.length);
     if(frames[0] != null){
     await frames[0].fill("input[name='email']", "jayakrishna@gmail.com");}
@@ -31,6 +31,8 @@ test("Interaction with frames", async() =>{
     }
     await frame.fill("input[placeholder='Enter email']","xpath");
     //frames[0].fill("#email", "jayakrishna@gmail.com")
+    const parent = frames[0].parentFrame();
+    await parent?.fill("input[name='lname']", "gmail");
     }else{ throw new Error("No frames found");}
 })
 })
