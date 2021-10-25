@@ -17,6 +17,8 @@ describe("searching elements", () =>{
     })
     
     test("github username", async() =>{
+        const header = await page.$("nav[role='navigation']")
+        header?.screenshot({path:"header.png"})
         if(page != null){
         await page.fill("input[name='username']","jayakrishna2398");
         await page.click('text = Search');}
