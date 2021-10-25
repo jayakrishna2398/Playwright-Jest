@@ -35,9 +35,9 @@ describe("searching elements", () =>{
         }))
         console.log(allUrls);
     })
-        afterEach(async() =>{
-            //await page.screenshot({path: Date.now() + "screenshot1.png"});
-            await page.screenshot({path: "screenshot2.png", fullPage: true});
+        afterEach(async() =>{ 
+            await page.screenshot({path: Date.now() + "screenshot1.png"});  //Normal size
+            await page.screenshot({path: "screenshot2.png", fullPage: true});  //Full screen
         })
 
     afterAll(async() => {
