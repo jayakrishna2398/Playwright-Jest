@@ -23,8 +23,9 @@ describe("TC001", () =>{
         header = new HeaderPage(page);
         login = new LoginPage(page);
         commonFunction = new CommonFunctions(page);
+
     })
-    test("Login positive", async() =>{
+    xtest("Login positive", async() =>{
         expect(page.url()).toBe("https://letcode.in/")
         await header.clickLoginLink();
         expect(page.url()).toBe("https://letcode.in/signin")
