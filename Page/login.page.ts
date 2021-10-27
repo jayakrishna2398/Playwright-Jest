@@ -6,12 +6,15 @@ export default class LoginPage{
         this.page = page;
 
     }
+    //eleEmailTextField = async() => await this.page.$("input[name='email']") //*we can write the code as same as below operation, which is same as below code in order to minimize the code complexity and optimization*//
+    
     public get eleEmailTextField(){
         const eleEmail = this.page.$("input[name='email']");
         if(eleEmail !=null){
             return eleEmail;
         }else throw new Error("No element");
         }
+
         public get elePswdTextField(){
             const elePswd = this.page.$("input[name='password']");
             if(elePswd !=null){
