@@ -3,6 +3,7 @@ import HeaderPage from "../../Page/Header.page";
 import LoginPage from "../../Page/login.page";
 import Env from "../utils/environment";
 import {JestPlaywrightConfig} from "jest-playwright-preset";
+import ReportUtils from "../utils/reportUtils";
 
     declare const reporter: any;
 
@@ -25,6 +26,7 @@ describe("TC001", () =>{
         .story("BOND-007");
         await reporter.startStep("Navigate to let code");
         expect(page.url()).toBe("https://letcode.in/")
+        await ReportUtils.screenshot("username");
         await reporter.endStep();
         await reporter.startStep("Click login link");
         await header.clickLoginLink();
@@ -32,8 +34,7 @@ describe("TC001", () =>{
         await reporter.endStep();
         await reporter.startStep("enter user name");
         await login.enterUserName("jayakrishna2398@gmail.com");
-        const screenshotBuffer = await page.screenshot();
-        reporter.addAttachment("userName", screenshotBuffer, "image/png");
+        await ReportUtils.screenshot();
         await reporter.endStep();
         await reporter.startStep("enter password");
         await reporter.endStep();

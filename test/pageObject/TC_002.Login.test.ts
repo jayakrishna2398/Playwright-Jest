@@ -2,22 +2,16 @@ import { Browser, BrowserContext, chromium, Page } from "../../node_modules/play
 import HeaderGmail from "../../Page/gmailHeader.page";
 import Login from "../../Page/gmailLogin.page";
 import Gmail from "../utils/gmail";
+import {JestPlaywrightConfig} from "jest-playwright-preset";
 
-
+declare const page: any;
 describe("TC002", () =>{
-    let browser: Browser;
-    let context: BrowserContext;
-    let page: Page;
+
 
     let gmailHeader: HeaderGmail
     let gmailLogin: Login
 
     beforeAll(async () => {
-        browser = await chromium.launch({
-            headless: false,
-        });
-        context = await browser.newContext()
-        page = await context.newPage();
         await page.goto(Gmail.test)
         gmailHeader = new HeaderGmail(page);
         gmailLogin = new Login(page);
