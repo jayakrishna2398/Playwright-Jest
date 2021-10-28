@@ -4,6 +4,8 @@ import LoginPage from "../../Page/login.page";
 import Env from "../utils/environment";
 import {JestPlaywrightConfig} from "jest-playwright-preset";
 
+    declare const reporter: any;
+
 describe("TC001", () =>{
 
     let header: HeaderPage
@@ -18,15 +20,28 @@ describe("TC001", () =>{
 
     })
     test("Login positive", async() =>{
+        await reporter
+        .description("Login into application")
+        .story("BOND-007");
+        await reporter.startStep("Navigate to let code");
         expect(page.url()).toBe("https://letcode.in/")
+        await reporter.endStep();
+        await reporter.startStep("Click login link");
         await header.clickLoginLink();
         expect(page.url()).toBe("https://letcode.in/signin")
+        await reporter.endStep();
+        await reporter.startStep("enter user name");
         await login.enterUserName("jayakrishna2398@gmail.com");
+        await reporter.endStep();
+        await reporter.startStep("enter password");
+        await login.enterPassword("kicha23031998")
+        await reporter.endStep();
         await login.clickBtn();
         const toaster = await commonFunction.toaster;
         expect(await toaster?.textContent()).toContain(" Welcome Jayakrishna Thirunavarrasu ");
+       await reporter.startStep("sign out");
         await header.clickSignOutLink();
-
+        await reporter.endStep();
     })
     afterAll(async() => {
         await browser.close();
