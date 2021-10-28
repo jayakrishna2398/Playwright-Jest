@@ -3,14 +3,21 @@
         "target" : "es6",
         "strict" : true,
         "module" : "commonjs",
-        "sourceMap" : true
+        "sourceMap" : true,
+        "resolveJsonModule": true
   },
-  
     "preset": "ts-jest/presets/default-esm",
     "globals": {
       "ts-jest": {
         "useESM": true
       }
     },
-    "testEnvironment": "node"
+    "testEnvironment": "node",
+    
+    "types":[
+      "@types/jest",
+    "jest-playwright-preset",
+    "expect-playwright",
+
+]
   }
