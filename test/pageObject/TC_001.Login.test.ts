@@ -32,9 +32,10 @@ describe("TC001", () =>{
         await reporter.endStep();
         await reporter.startStep("enter user name");
         await login.enterUserName("jayakrishna2398@gmail.com");
+        const screenshotBuffer = await page.screenshot();
+        reporter.addAttachment("userName", screenshotBuffer, "image/png");
         await reporter.endStep();
         await reporter.startStep("enter password");
-        await login.enterPassword("kicha23031998")
         await reporter.endStep();
         await login.clickBtn();
         const toaster = await commonFunction.toaster;
