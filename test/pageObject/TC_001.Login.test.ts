@@ -22,7 +22,6 @@ describe("TC001", () =>{
         await header.clickLoginLink();
         expect(page.url()).toBe("https://letcode.in/signin")
         await login.enterUserName("jayakrishna2398@gmail.com");
-        await login.enterPassword("kicha23031998");
         await login.clickBtn();
         const toaster = await commonFunction.toaster;
         expect(await toaster?.textContent()).toContain(" Welcome Jayakrishna Thirunavarrasu ");
