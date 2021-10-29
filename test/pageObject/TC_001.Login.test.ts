@@ -4,6 +4,7 @@ import LoginPage from "../../Page/login.page";
 import Env from "../utils/environment";
 import {JestPlaywrightConfig} from "jest-playwright-preset";
 import ReportUtils from "../utils/reportUtils";
+import * as data from "../data/login.cred.json";
 
     declare const reporter: any;
 
@@ -33,7 +34,8 @@ describe("TC001", () =>{
         expect(page.url()).toBe("https://letcode.in/signin")
         await reporter.endStep();
         await reporter.startStep("enter user name");
-        await login.enterUserName("jayakrishna2398@gmail.com");
+        await login.enterUserName(data.email);
+        await login.enterPassword(data.pass);
         await ReportUtils.screenshot();
         await reporter.endStep();
         await reporter.startStep("enter password");
