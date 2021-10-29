@@ -6,9 +6,13 @@ module.exports = {
         '^.+\\.ts$': 'ts-jest',
     },
     testRunner: 'jasmine2',
-    setupFilesAfterEnv: ["jest-allure/dist/setup"],
-    testMatch: [
-        "<rootDir>/test/pageObject/**.ts"
-    ]
+    setupFilesAfterEnv: ["jest-allure/dist/setup"]
+        // testMatch: [
+        //     "<rootDir>/test/pageObject/**.ts"     //*Parallel jest execution between two tests of pageObject*//
+        // ]
 
 }
+
+//*For sequential, jest -i shoud be used in package.json file in scripts tag*//
+//source: jest doc --jestrunband//
+//For a particular test execution = jest filename.test.ts//

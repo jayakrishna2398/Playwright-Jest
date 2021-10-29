@@ -1,26 +1,26 @@
-import {chromium,Browser,BrowserContext,Page, ChromiumBrowserContext} from "playwright" 
+import {JestPlaywrightConfig} from "jest-playwright-preset";
+import { Page } from "../../node_modules/playwright-core/types/types";
 
 describe("frames", () =>{
-    let browser: Browser;
-    let context: BrowserContext;
+    // let browser: Browser;
+    // let context: BrowserContext;
     let page: Page;
 
 beforeAll( async() =>{
-    browser = await chromium.launch({
-        headless: false
-    })
-     context = await browser.newContext({
-            recordVideo:{
-              dir: "./videos/",
-            size: {
-              width: 640,
-              height: 480
-            }
-        }
+    // browser = await chromium.launch({
+    //     headless: false
+    // })
+    //  context = await browser.newContext({
+    //         recordVideo:{
+    //           dir: "./videos/",
+    //         size: {
+    //           width: 640,
+    //           height: 480
+    //         }
+    //     }
+        page = await context.newPage();
+        await page.goto("https://letcode.in/frame")
      })
-     page = await context.newPage();
-    await page.goto("https://letcode.in/frame")
-})
 
 //testing with single frame
 test("Interaction with frames", async() =>{
