@@ -56,4 +56,4 @@ describe("drag and drop", () =>{
 
 //Note: 
 //we cant bring a frame to mouse function since its not available...
-//so since frame is within the frame, we should use the mouse function with page itself.
+//so since frame is within the frame(child), we should use the mouse function with page itself.

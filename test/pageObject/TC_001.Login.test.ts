@@ -20,7 +20,7 @@ describe("TC001", () =>{
         commonFunction = new CommonFunctions(page);
 
     })
-    test("Login positive", async() =>{
+    test("Login positive_JIRA101", async() =>{
         await reporter
         .description("Login into application")
         .story("BOND-007");
