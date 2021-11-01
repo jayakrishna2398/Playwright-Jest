@@ -20,6 +20,8 @@ describe('launch browser', () => {
 
             await page.click('span:text("Next")');
 
+            await page.fill("input[name ='password']", '');
+
             //await page.click('span:text("Next")');
 
             //await page.click('button:text("LOGIN")')
