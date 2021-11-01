@@ -1,0 +1,53 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1635517630951' stop='1635517646317'>
+    <name>TC001</name>
+    <title>TC001</title>
+    <test-cases>
+        <test-case start='1635517638160' status='passed' stop='1635517646309'>
+            <name>Login positive_JIRA101</name>
+            <title>Login positive_JIRA101</title>
+            <labels>
+                <label name='story' value='BOND-007'/>
+            </labels>
+            <parameters/>
+            <steps>
+                <step start='1635517638163' status='passed' stop='1635517638478'>
+                    <name>Navigate to let code</name>
+                    <title>Navigate to let code</title>
+                    <attachments>
+                        <attachment title='username' source='ef24f26a-6507-4056-b7bd-738f44b285aa-attachment.png' type='image/png' size='82112'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1635517638478' status='passed' stop='1635517638789'>
+                    <name>Click login link</name>
+                    <title>Click login link</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1635517638789' status='passed' stop='1635517639583'>
+                    <name>enter user name</name>
+                    <title>enter user name</title>
+                    <attachments>
+                        <attachment title='undefined' source='e0eec990-69a9-4499-8422-8fd9bc6a88be-attachment.png' type='image/png' size='120893'/>
+                    </attachments>
+                    <steps/>
+                </step>
+                <step start='1635517639583' status='passed' stop='1635517639583'>
+                    <name>enter password</name>
+                    <title>enter password</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start='1635517640964' status='passed' stop='1635517646307'>
+                    <name>sign out</name>
+                    <title>sign out</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <description type='text'>Login into application</description>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>

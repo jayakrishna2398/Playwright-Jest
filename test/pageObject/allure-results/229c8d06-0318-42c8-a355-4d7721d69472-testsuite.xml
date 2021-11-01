@@ -1,0 +1,28 @@
+<?xml version='1.0'?>
+<ns2:test-suite xmlns:ns2='urn:model.allure.qatools.yandex.ru' start='1635745526454' stop='1635745536517'>
+    <name>TC002</name>
+    <title>TC002</title>
+    <test-cases>
+        <test-case start='1635745534940' status='failed' stop='1635745536316'>
+            <name>Login for gmail</name>
+            <title>Login for gmail</title>
+            <labels/>
+            <parameters/>
+            <steps/>
+            <attachments/>
+            <failure>
+                <message>Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&amp;service=mail&amp;sacu=1&amp;rip=1&amp;flowName=GlifWebSignIn&amp;flowEntry=ServiceLogin"
+                Received: "https://www.google.com/intl/en-GB/gmail/about/#"</message>
+                <stack-trace>Error: expect(received).toBe(expected) // Object.is equality
+                
+                Expected: "https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&amp;service=mail&amp;sacu=1&amp;rip=1&amp;flowName=GlifWebSignIn&amp;flowEntry=ServiceLogin"
+                Received: "https://www.google.com/intl/en-GB/gmail/about/#"
+                    at E:\letPlayWright\test\pageObject\TC_002.Login.test.ts:22:29
+                    at Generator.next (&lt;anonymous>)
+                    at fulfilled (E:\letPlayWright\test\pageObject\TC_002.Login.test.ts:5:58)</stack-trace>
+            </failure>
+        </test-case>
+    </test-cases>
+</ns2:test-suite>
