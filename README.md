@@ -1,14 +1,6 @@
 =======
-# PLAYWRIGHT AUTOMATION:
+# PLAYWRIGHT AUTOMATION USING JEST:
 
-This is a automation testing tool used to automate chromium,firefox and webkit within a single API.
-It is also used to build the enable cross-browser web testing. It can be chromium to firefox like that.
+Do check this below link for more details about the project.
 
-In this project,
-1. I have did how to test basic input type box
-2. Drop down text box
-3. How to manage alert boxes
-4. Testing and handling of single window and multiple windows
-5. How to do a codeless automation using chromium
-6. How to upload videos during the execution
->>>>>>> af52b3d638e0b9335296e351cfb81a6130058af0
+https://drive.google.com/file/d/1xZH7hmVAJvM9yeQdui11E9BqFX0o-JrR/view?usp=sharing
